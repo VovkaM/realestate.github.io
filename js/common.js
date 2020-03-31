@@ -1,5 +1,13 @@
 $(function() {
 
+	/** anchor - about us */
+	$(".aboutUsLink").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top - 100}, 1000);
+    });
+
 	/** menu hover */
 	$('.itemWithDropdown').hover(function() {
 		$('.re-header-navigation-menuList-item-dropdown').fadeIn(500)
@@ -45,6 +53,14 @@ $(function() {
 			$(this).addClass('current')
 		} 
 	})   
+
+	/** about us - read_more */
+
+	$('.re-aboutUs .read_more').click(function(e) {
+		e.preventDefault()
+		$(this).hide()
+		$('.re-aboutUs-hiddenText').slideDown()
+	})
 
 	/** slider on "What people say" */
 	$('.owl-carousel').owlCarousel({
