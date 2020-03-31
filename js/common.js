@@ -5,7 +5,9 @@ $(function() {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top - 100}, 1000);
+		$('body,html').animate({scrollTop: top - 100}, 1000);
+		$('.re-header-burgerMenu').removeClass('active');
+		$('.re-header-mobileMenu').slideUp(500)
     });
 
 	/** menu hover */
