@@ -29,7 +29,7 @@ $(function() {
 	})
 
 	/** dropdown in mob menu */
-	$('.re-header-mobileMenu .itemWithDropdown a').click(function(e) {
+	$('.re-header-mobileMenu .itemWithDropdown > a').click(function(e) {
 		e.preventDefault()
 		$('.re-header-mobileMenu-item-dropdown').slideToggle(500)
 	})
