@@ -83,6 +83,7 @@ $(function() {
 		}
 	})
 
+
 	/** go up btn */
 
 	var btn = $('.re-goUp');
