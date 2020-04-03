@@ -65,11 +65,29 @@ $(function() {
 	})
 
 	/** slider on "What people say" */
-	$('.owl-carousel').owlCarousel({
+	$('.dots_false .owl-carousel').owlCarousel({
 		loop:true,
 		margin:10,
 		nav:true,
 		dots: false,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	})
+
+	$('.dots_true .owl-carousel').owlCarousel({
+		loop:true,
+		margin:10,
+		nav:true,
+		dots: true,
 		responsive:{
 			0:{
 				items:1
@@ -100,5 +118,16 @@ $(function() {
 		e.preventDefault();
 		$('html, body').animate({scrollTop:0}, '300');
 	  });
+
+	  /** request a showing */
+
+	  $('#requestShowing').click(function(e) {
+		  e.preventDefault()
+		  $('.showingRequestForm').fadeIn();
+	  })
+
+	  $('.showingRequestForm-close').click(function() {
+		$('.showingRequestForm').fadeOut();
+	  })
 
 });
